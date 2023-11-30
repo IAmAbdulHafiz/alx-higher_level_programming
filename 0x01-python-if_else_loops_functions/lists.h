@@ -1,15 +1,27 @@
-#ifndef LISTS_H
-#define LISTS_H
+#ifndef LISTS_H_
+#define LISTS_H_
 
+#include <stdlib.h>
 
-void uppercase(char str);
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+} listint_t;
 
-int islower(char c);
+size_t print_listint(const listint_t *h);
 
-int print_last_digit(int number);
+listint_t *add_nodeint_end(listint_t **head, const int n);
 
-int add(int a, int b);
+void free_listint(listint_t *head);
 
-int magic_calculation(int a, int b);
+listint_t *insert_node(listint_t **head, int number);
 
 #endif /* LISTS_H */

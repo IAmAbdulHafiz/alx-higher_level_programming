@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
-for char in "abcdefghijklmnopqrstuvwxyz":
-    if char not in "qe":
-        print(f"{char}", end='')
+for alpha in range(97, 123):
+    if chr(alpha) != 'q' and chr(alpha) != 'e':
+        print("{}".format(chr(alpha)), end="")
