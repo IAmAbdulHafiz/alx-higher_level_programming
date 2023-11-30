@@ -5,29 +5,30 @@
  * @head: A pointer the head of the linked list.
  * @num: The num to insert.
  *
- * Return: If the function fails - NULL. Otherwise - a pointer to the 
- * current node.
+ * Return: If the function fails - NULL. Otherwise - a pointer to 
+ * the new_value node.
  */
 listint_t *insert_node(listint_t **head, int num)
 {
-	listint_t *node = *head, *current;
+	listint_t *node = *head, *new_value;
 
-	current = malloc(sizeof(listint_t));
-	if (current == NULL)
+	new_value = malloc(sizeof(listint_t));
+	if (new_value == NULL)
 		return (NULL);
-	current->n = num;
+	new_value->n = num;
 
 	if (node == NULL || node->n >= num)
 	{
-		current->next = node;
-		*head = current;
-		return (current);
+		new_value->next = node;
+		*head = new_value;
+		return (new_value);
 	}
 
 	while (node && node->next && node->next->n < num)
 		node = node->next;
 
-	current->next = node->next;
-	node->next = current;
+	new_value->next = node->next;
+	node->next = new_value;
 
-	return (current);
+	return (new_value);
+}
