@@ -47,7 +47,7 @@ class SinglyLinkedList:
         self.head = None
 
     def sorted_insert(self, value):
-        """Insert a new Node into the correct sorted position in the list (increasing order).
+        """Insert a new Node into the Single Linked list.
 
         Args:
             value (int): The data of the new Node to insert.
@@ -58,7 +58,8 @@ class SinglyLinkedList:
             self.head = new_node
         else:
             current = self.head
-            while current.next_node is not None and current.next_node.data < value:
+            while current.next_node is not None and
+            current.next_node.data < value:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
