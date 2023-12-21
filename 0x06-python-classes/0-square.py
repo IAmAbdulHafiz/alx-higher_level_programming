@@ -2,6 +2,7 @@
 
 """ Define a Class Square. """
 
+
 class Square:
     """ Empty class Square. """
     pass
