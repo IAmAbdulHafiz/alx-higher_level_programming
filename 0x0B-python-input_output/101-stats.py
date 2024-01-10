@@ -25,16 +25,16 @@ if __name__ == "__main__":
 
     size = 0
     status_codes = {}
-    my_valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
-    my_count = 0
+    valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
+    count = 0
 
     try:
         for line in sys.stdin:
-            if my_count == 10:
+            if count == 10:
                 print_stats(size, status_codes)
-                my_count = 1
+                count = 1
             else:
-                my_count += 1
+                count += 1
 
             line = line.split()
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
                 pass
 
             try:
-                if line[-2] in my_valid_codes:
+                if line[-2] in valid_codes:
                     if status_codes.get(line[-2], -1) == -1:
                         status_codes[line[-2]] = 1
                     else:
