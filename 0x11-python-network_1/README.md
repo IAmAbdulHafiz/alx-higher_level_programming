@@ -9,7 +9,7 @@ Star Wars API, GitHub API, and Twitter API).
 
 * **0. What's my status? #0**
   * [0-hbtn_status.py](./0-hbtn_status.py): Python script that fetches
-  `https://intranet.hbtn.io/status`.
+  `https://alx-intranet.hbtn.io/status`.
   * Uses `urllib`.
 
 * **1. Response header value #0**
@@ -32,7 +32,7 @@ Star Wars API, GitHub API, and Twitter API).
 
 * **4. What's my status? #1**
   * [4-hbtn_status.py](./4-hbtn_status.py): Python script that fetches
-  `https://intranet.hbtn.io/status`.
+  `https://alx-intranet.hbtn.io/status`.
   * Uses `requests`.
 
 * **5. Response header value #1**
